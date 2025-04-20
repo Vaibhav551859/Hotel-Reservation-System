@@ -20,21 +20,21 @@ The **HostNate** is a robust **Spring Boot** web application that streamlines ho
 
 ## Screenshots 📸
 
-| Login | Dashboard |
-|-----------|------------------|
-| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) |
+| Login |
+|-----------|
+| ![Login](screenshots/login.png) | 
 
 | Home | Reservations |
 |-----------|------------------|
 | ![Home](screenshots/home.png) | ![Reservations](screenshots/Reservation Form.png) |
 
-| Rooms | Guest List |
-|-----------|------------------|
-| ![Rooms](screenshots/rooms.png) | ![Guets](screenshots/guests.png) |
+| Rooms |
+|-----------|
+| ![Rooms](screenshots/rooms.png) | 
 
-| Reservation Form | Payment Form |
-|--------------|------------|
-| ![Reservation Form](screenshots/newReserv.png) | ![Payment Form](screenshots/payment.png) |
+| Payment Form |
+|------------|
+ |![Payment Form](screenshots/payment.png) |
 
 ---
 
@@ -69,7 +69,7 @@ The database contains these main tables:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/Anugupta5102/HostMate.git
+git clone https://github.com/Vaibhav551859/Hotel-Reservation-System
 cd HostMate
 ```
 
@@ -134,16 +134,10 @@ mvn spring-boot:run
 
 ---
 
-## License 📜
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## Contact 📧
 
-- **Developer:** Anushree Gupta  
-- **GitHub:** [@Anugupta5102](https://github.com/Anugupta5102)  
-- **Email:** anugupta5102@gmail.com  
+- **Developer:** Vaibhav Jha 
+- **Email:** vaibhavjha521@gmail.com  
 
 ---
 
