@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout :: head}"></head>
+<body style="
+    background: url('/images/hotel-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+">
+
+<nav th:replace="~{layout :: nav}"></nav>
+
+<div class="container mt-5">
+    <div class="p-5 mb-4 bg-gradient-primary text-white rounded-4 shadow" style="background: linear-gradient(135deg, #0062E6, #33AEFF);">
+        <div class="container-fluid py-4">
+            <h1 class="display-3 fw-bold">🏨 Welcome to Hotel Management System</h1>
+            <p class="lead mt-3">Your all-in-one solution for hotel reservations and operations management.</p>
+            <hr class="my-4 border-light">
+            <div class="d-flex flex-wrap gap-3">
+                <a href="/reservation/new" class="btn btn-light btn-lg px-4 shadow-sm">📝 New Reservation</a>
+                <a href="/reservations" class="btn btn-outline-light btn-lg px-4 shadow-sm">📋 View Reservations</a>
+                <a href="/admin/dashboard" class="btn btn-outline-light btn-lg px-4 shadow-sm">📊 Admin Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 g-4">
+        <!-- Recent Reservations -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4" style="background-color: rgba(255, 255, 255, 0.9);">
+                <div class="card-header bg-primary text-white rounded-top-4">
+                    <h5 class="card-title mb-0">📖 Recent Reservations</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="alert alert-info" th:if="${recentReservations.empty}">
+                        No recent reservations found.
+                    </div>
+                    <div class="list-group" th:if="${!recentReservations.empty}">
+                        <a th:each="reservation : ${recentReservations}"
+                           th:href="@{/reservation/edit/{id}(id=${reservation.id})}"
+                           class="list-group-item list-group-item-action rounded-3 mb-2 shadow-sm">
+                            <div class="d-flex justify-content-between">
+                                <h5 th:text="${reservation.guestName}"></h5>
+                                <small th:text="${#temporals.format(reservation.reservationDate, 'dd-MM-yyyy')}"></small>
+                            </div>
+                            <p class="mb-1">🛏️ Room: <span th:text="${reservation.roomNumber}"></span></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small>
+                                    <span th:text="${#temporals.format(reservation.checkInDate, 'dd-MM-yyyy')}"></span> to
+                                    <span th:text="${#temporals.format(reservation.checkOutDate, 'dd-MM-yyyy')}"></span>
+                                </small>
+                                <span th:class="${'badge bg-' +
+                                        (reservation.status == 'CONFIRMED' ? 'success' :
+                                        (reservation.status == 'PENDING' ? 'warning' : 'info'))}"
+                                      th:text="${reservation.status}"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4" style="background-color: rgba(255, 255, 255, 0.9);">
+                <div class="card-header bg-success text-white rounded-top-4">
+                    <h5 class="card-title mb-0">⚡ Quick Actions</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="list-group">
+                        <a href="/reservation/new" class="list-group-item list-group-item-action rounded-3 mb-2 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-calendar-plus fs-3 text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Create New Reservation</h5>
+                                    <p class="mb-0 text-muted">Book a new room for a guest</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/admin/rooms" class="list-group-item list-group-item-action rounded-3 mb-2 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-door-open fs-3 text-success me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Manage Rooms</h5>
+                                    <p class="mb-0 text-muted">View and update room information</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/admin/guests" class="list-group-item list-group-item-action rounded-3 mb-2 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-people fs-3 text-info me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Manage Guests</h5>
+                                    <p class="mb-0 text-muted">View and update guest information</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/admin/dashboard" class="list-group-item list-group-item-action rounded-3 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-graph-up fs-3 text-warning me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">View Dashboard</h5>
+                                    <p class="mb-0 text-muted">See statistics and reports</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="~{layout :: scripts}"></div>
+</body>
+</html>
