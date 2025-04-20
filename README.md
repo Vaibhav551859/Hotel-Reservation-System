@@ -34,7 +34,7 @@ The **HostNate** is a robust **Spring Boot** web application that streamlines ho
 
 | Payment Form |
 |------------|
- |![Payment Form](screenshots/payment.png) |
+| ![Payment Form](screenshots/payment.png) |
 
 ---
 
