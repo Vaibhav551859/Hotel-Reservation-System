@@ -1,24 +1,24 @@
-# HostMate 🏨
+# HostMate 
 
 ## Overview
 The **HostNate** is a robust **Spring Boot** web application that streamlines hotel operations like room reservations, guest management, and role-based access. It uses **MySQL** for backend data storage and **Thymeleaf** for the frontend view layer. The system is built to increase management efficiency by up to **60%**.
 
 ---
 
-## Features ✨
+## Features 
 
-- ✅ **Admin Dashboard** for complete control over hotel operations  
-- ✅ **Admin Authentication & Authorization** with Spring Security 🔐  
-- ✅ **Room Booking & Reservation Management** 🛏️  
-- ✅ **Guest Information Handling** 👤  
-- ✅ **Real-time Room Availability Check**  
-- ✅ **Payment Handling (Simulation)** 💳  
-- ✅ **Spring Boot + Thymeleaf UI**  
-- ✅ **CSRF protection + session security**  
+-  **Admin Dashboard** for complete control over hotel operations  
+-  **Admin Authentication & Authorization** with Spring Security 
+-  **Room Booking & Reservation Management**   
+-  **Guest Information Handling**   
+-  **Real-time Room Availability Check** 
+-  **Payment Handling (Simulation)**   
+-  **Spring Boot + Thymeleaf UI**
+-  **CSRF protection + session security**
 
 ---
 
-## Screenshots 📸
+## Screenshots 
 
 | Login |
 |-----------|
@@ -38,7 +38,7 @@ The **HostNate** is a robust **Spring Boot** web application that streamlines ho
 
 ---
 
-## Technologies Used 🛠️
+## Technologies Used 
 
 | Layer        | Tech Stack                     |
 |--------------|--------------------------------|
@@ -51,7 +51,7 @@ The **HostNate** is a robust **Spring Boot** web application that streamlines ho
 
 ---
 
-## Database Schema 📊
+## Database Schema 
 
 The database contains these main tables:
 
@@ -65,15 +65,15 @@ The database contains these main tables:
 
 ---
 
-## Setup Instructions 🚀
+## Setup Instructions 
 
-### 1️⃣ Clone the Repository
+### 1️. Clone the Repository
 ```bash
 git clone https://github.com/Vaibhav551859/Hotel-Reservation-System
 cd HostMate
 ```
 
-### 2️⃣ Configure Database
+### 2️. Configure Database
 Update `src/main/resources/application.properties`:
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/hotel_management
@@ -89,7 +89,7 @@ Then, create the database:
 CREATE DATABASE hotel_management;
 ```
 
-### 3️⃣ Build and Run the Application
+### 3️. Build and Run the Application
 ```bash
 mvn clean install
 mvn spring-boot:run
@@ -97,7 +97,7 @@ mvn spring-boot:run
 
 ---
 
-## Access URLs 🌐
+## Access URLs 
 
 | Purpose           | URL                                |
 |-------------------|-------------------------------------|
@@ -109,7 +109,7 @@ mvn spring-boot:run
 
 ---
 
-## API Endpoints 🔗
+## API Endpoints 
 
 | Method | Endpoint                | Description                    |
 |--------|--------------------------|--------------------------------|
@@ -124,17 +124,17 @@ mvn spring-boot:run
 
 ---
 
-## Contribution Guidelines 🤝
+## Contribution Guidelines 
 
 1. Fork the repo 🍴  
 2. Create a branch: `git checkout -b feature/your-feature-name`  
 3. Make your changes and commit: `git commit -m 'Add your message here'`  
 4. Push the branch: `git push origin feature/your-feature-name`  
-5. Create a Pull Request 📩
+5. Create a Pull Request 
 
 ---
 
-## Contact 📧
+## Contact 
 
 - **Developer:** Vaibhav Jha 
 - **Email:** vaibhavjha521@gmail.com  
