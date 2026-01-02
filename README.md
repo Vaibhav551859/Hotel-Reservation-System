@@ -140,6 +140,3 @@ mvn spring-boot:run
 - **Email:** vaibhavjha521@gmail.com  
 
 ---
-
-🌟 **Star this repo if you find it useful or learned something new!**  
-✨ Happy coding! 🧡
