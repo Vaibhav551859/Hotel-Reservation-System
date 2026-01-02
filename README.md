@@ -18,26 +18,6 @@ The **HostNate** is a robust **Spring Boot** web application that streamlines ho
 
 ---
 
-## Screenshots 
-
-| Login |
-|-----------|
-| ![Login](screenshots/login.png) | 
-
-| Home | Reservations |
-|-----------|------------------|
-| ![Home](screenshots/home.png) | ![Reservations](screenshots/Reservation Form.png) |
-
-| Rooms |
-|-----------|
-| ![Rooms](screenshots/rooms.png) | 
-
-| Payment Form |
-|------------|
-| ![Payment Form](screenshots/payment.png) |
-
----
-
 ## Technologies Used 
 
 | Layer        | Tech Stack                     |
